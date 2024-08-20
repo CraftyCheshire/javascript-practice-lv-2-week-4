@@ -6,12 +6,13 @@
 // TODO: First, familiarize yourself with the two factory functions provided below:
 
 // Factory function to create a book
-function createBook(title, author) {
+function createBook(title, author, year) {
     return {
         title,
         author,
+        year,
         showDetails() {
-            console.log(`"${this.title}" by ${this.author}`);
+            console.log(`"${this.title}" by ${this.author} in ${this.year}.`);
         }
     };
 }
@@ -24,7 +25,7 @@ function createTask(description, dueDate) {
         completed: false,
         completeTask() {
             this.completed = true;
-            console.log(`Task "${this.description}" is now completed.`);
+            console.log(`Task "${this.description}" is now completed. The due date was ${this.dueDate}.`);
         }
     };
 }
@@ -47,6 +48,15 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try building your own book collection with different books!
+const bookCollection = [];
+bookCollection.push(createBook('The Ultimate Hitchhikers Guide to the Galaxy', 'Douglas Adams', 1986));
+bookCollection.push(createBook('A Court of Thorns and Roses', 'Sarah J. Maas', 2015));
+bookCollection.push(createBook('The Chronicles of Alice', 'Christina Henry', 1986));
+
+for (let i = 0; i < bookCollection.length; i++) {
+    bookCollection[i].showDetails();
+}
+console.log()
 
 
 // EXERCISE 2: Managing a Task List
@@ -65,8 +75,15 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try building your own task list and marking each task as completed!
+const taskList = [];
+taskList.push(createTask('Clean living room', '8-21-24'));
+taskList.push(createTask('Clean spare shower', '8-22-24'));
+taskList.push(createTask('Paint bedroom', '12-28-24'));
 
-
+for (let i = 0; i < taskList.length; i++) {
+    taskList[i].completeTask();
+}
+console.log()
 // EXERCISE 3: Updating Book Titles
 // INSTRUCTIONS: Create an empty array called `library`.
 // Use the `push` method to add 3 books to the array using the `createBook` factory function.
@@ -84,6 +101,17 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try updating the titles of your own library!
+
+const library = [];
+library.push(createBook('Full Dark, No Stars', 'Stephen King', 2010));
+library.push(createBook('The Cask of Amontillado', 'Edgar Allen Poe', 1846));
+library.push(createBook('Almost Interesting: The Memoir', 'David Spade', 2016));
+
+for (let i = 0; i < library.length; i++) {
+    library[i].title += ' - Second Edition';
+    library[i].showDetails();
+}
+console.log()
 
 
 // EXERCISE 4: Rescheduling Tasks
