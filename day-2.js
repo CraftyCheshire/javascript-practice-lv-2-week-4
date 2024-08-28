@@ -84,6 +84,10 @@ console.log('Address:', state1.address);
 // Log each movie title individually using a loop.
 console.log('\nTry It! 3')
 state.favoriteMovies = ['High School Musical', 'Cadet Kelly', '50 First Dates', 'Lord of the Rings'];
+console.table(state.favoriteMovies);
+for (let i = 0; i < state.favoriteMovies.length; i++) {
+    console.log(`Movie ${i + 1}:`, state.favoriteMovies[i]);
+}
 // EXAMPLE:
 // state.favoriteBooks = ['Pride and Prejudice', '1984', 'To Kill a Mockingbird'];
 
@@ -101,35 +105,41 @@ state.favoriteMovies = ['High School Musical', 'Cadet Kelly', '50 First Dates', 
 // INSTRUCTIONS: Add a property `recentPurchases` to the `state` object that is an array of numbers representing purchase amounts.
 // Use `console.log` to log the entire `state` object, and use `console.table` to log the `recentPurchases` array.
 // Log each purchase amount individually using a loop.
-
+console.log('\nTry It! 4')
 // EXAMPLE:
 // state.recentTemperatures = [72, 75, 80, 68];
-
+state.recentPurchases = [23, 42, 69];
 // console.log('State:', state);
 // console.table(state.recentTemperatures);
-
+console.log('State', state);
+console.table(state.recentPurchases);
 // for (let i = 0; i < state.recentTemperatures.length; i++) {
 //     console.log(`Temperature ${i + 1}:`, state.recentTemperatures[i]);
 // }
 
 // TODO: Now, you try creating your own list of recent purchases and logging them to the console!
-
+for (let i = 0; i < state.recentPurchases.length; i++) {
+    console.log(`Purchases ${i + 1}:`, state.recentPurchases[i]);
+}
 
 // EXERCISE 5: Adding Hobbies and Interests
 // INSTRUCTIONS: Add a property `hobbies` to the `state` object that is an array of strings representing different hobbies or interests.
 // Use `console.log` to log the entire `state` object, and use `console.table` to log the `hobbies` array.
 // Log each hobby individually using a loop.
-
+console.log('\nTry It! 5')
 // EXAMPLE:
 // state.skills = ['JavaScript', 'HTML', 'CSS'];
-
+state.hobbies = ['Arting','Reading', 'Gardening'];
 // console.log('State:', state);
 // console.table(state.skills);
-
+console.log('State:', state.hobbies);
+console.table(state.hobbies);
 // for (let i = 0; i < state.skills.length; i++) {
 //     console.log(`Skill ${i + 1}:`, state.skills[i]);
 // }
-
+for (let i = 0; i < state.hobbies.length; i++) {
+    console.log(`Hobbies: ${i + 1}:`, state.hobbies[i]);
+}
 // TODO: Now, you try adding your own hobbies to the `state` object and logging them to the console!
 
 
