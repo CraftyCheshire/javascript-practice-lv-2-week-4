@@ -6,6 +6,16 @@
 // Note: You don't have to create another state object. Only one `state` object will exist in this file. That is why we call it "global"
 
 let state = {};
+state.name = 'Oleivr Holmes';
+state.email = 'oleivrholmes@gmail.com';
+state.zipCode = '38027';
+
+console.log('State', state);
+console.table(state);
+
+console.log('name:', state.name);
+console.log('email:', state.email);
+console.log('zipCode:', state.zipCode);
 
 // EXERCISE 1: Updating Basic Information
 // INSTRUCTIONS: Add properties `name`, `email`, and `zipCode` to the `state` object and assign them appropriate values.
@@ -25,7 +35,18 @@ let state = {};
 // console.log('Zip Code:', state.zipCode);
 
 // TODO: Now, you try updating the `state` object with your own values for `name`, `email`, and `zipCode`!
+console.log("\nTry It! 1")
+let state1 = {}
+    state1.name = 'Alys Valliant';
+    state1.email = 'a.v.alysinwanderland@gmail.com';
+    state1.zipCode = '38027';
 
+    console.log('State1', state1);
+    console.table(state1);
+
+    console.log('name:', state1.name);
+    console.log('email:', state1.email);
+    console.log('zipCode:', state1.zipCode);
 
 // EXERCISE 2: Adding More Personal Information
 // INSTRUCTIONS: Add properties `age`, `phoneNumber`, and `address` to the `state` object and assign them appropriate values.
@@ -36,13 +57,23 @@ let state = {};
 // state.age = 30;
 // state.phoneNumber = '555-1234';
 // state.address = '123 Main St, Springfield';
+console.log("\nTry It! 2")
+
+state1.age = '29';
+state1.phoneNumber = '985-225-5041';
+state1.address = '3666 Cedell dr.';
 
 // console.log('State:', state);
 // console.table(state);
+console.log('State1', state1);
+console.table(state1);
 
 // console.log('Age:', state.age);
 // console.log('Phone Number:', state.phoneNumber);
 // console.log('Address:', state.address);
+console.log('Age:', state1.age);
+console.log('Phone Number:', state1.phoneNumber);
+console.log('Address:', state1.address);
 
 // TODO: Now, you try updating the `state` object with your own values for `age`, `phoneNumber`, and `address`!
 
@@ -51,7 +82,8 @@ let state = {};
 // INSTRUCTIONS: Add a property `favoriteMovies` to the `state` object that is an array of strings representing movie titles.
 // Use `console.log` to log the entire `state` object, and use `console.table` to log the `favoriteMovies` array.
 // Log each movie title individually using a loop.
-
+console.log('\nTry It! 3')
+state.favoriteMovies = ['High School Musical', 'Cadet Kelly', '50 First Dates', 'Lord of the Rings'];
 // EXAMPLE:
 // state.favoriteBooks = ['Pride and Prejudice', '1984', 'To Kill a Mockingbird'];
 
